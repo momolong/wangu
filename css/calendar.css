@@ -1,0 +1,55 @@
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("../img/bc.png") #521A06 repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;text-align: center;}
+        header h1{flex: 4;}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        	
+        .head{display:flex;border-bottom: 1px solid #fff;margin-bottom: 5vw;;}
+        .head i{background:url('img/header1.png');background-size:100%;display: block;width:20vw;height:20vw;border-radius: 50%;box-shadow: 0 0 8px 2px #000;}
+    	.head P{box-shadow: none;margin-top: 13vw;}
+    	article p{box-shadow: 0 0 8px 2px #000;text-align: center;margin: 3vw;}
+    	article hr{margin: 5vw 0;}
+    	
+    	/*全部样式*/
+        #full-clndr {width: 100%;max-width: 600px;margin: 10px auto;color:#fff;border-bottom: 1px solid #fff;background:none}
+        /*年月*/
+        #full-clndr .clndr-controls {color: white;text-align: center;border-bottom: 1px solid #fff;padding:5px 0 ;}
+        /*向左箭头*/
+        #full-clndr .clndr-controls .clndr-previous-button {float: left;text-align: left;margin-left: 0;}
+        /*向右箭头*/
+        #full-clndr .clndr-controls .clndr-next-button {float: right;text-align: right;margin-right:0;}
+        /*左右箭头*/
+        #full-clndr .clndr-controls .clndr-previous-button,
+        #full-clndr .clndr-controls .clndr-next-button {width: 1%;cursor: pointer;}
+        #full-clndr .clndr-controls .clndr-previous-button:hover,
+        #full-clndr .clndr-controls .clndr-next-button:hover {opacity: 0.5;}
+        /*日期表格全部*/
+        #full-clndr .clndr-grid {width: 100%;}
+        /*日期表格头部*/
+        #full-clndr .clndr-grid .days-of-the-week {width: 100%;}
+        /*日期头部表格每格*/
+        #full-clndr .clndr-grid .days-of-the-week .header-day {width: 14.28%;padding: 0px;margin:0px;text-align: center;color: white;
+            display: inline-block;}
+        /*日期天数全部*/
+        #full-clndr .clndr-grid .days {width: 100%;}
+        /*日期天数表格每格*/
+        #full-clndr .clndr-grid .days .day,
+        #full-clndr .clndr-grid .days .empty {width: 14.28%;height: 36px;text-align: center;line-height: 40px;color: #fff;display: inline-block;}
+        #full-clndr .clndr-grid .days .day.event .day-number,
+        #full-clndr .clndr-grid .days .empty.event .day-number {padding-bottom: 4px;border-bottom: 2px solid #3883a3;}
+        #full-clndr .clndr-grid .days .day.adjacent-month .day-number,
+        #full-clndr .clndr-grid .days .empty.adjacent-month .day-number {opacity: 0.3;}
+        /*当天*/
+        #full-clndr .clndr-grid .days .today {text-decoration:underline;box-shadow: 0 0 10px #fff inset;}
+        #full-clndr .clndr-grid .days .past:hover{background-color: #999;}
+        #full-clndr .clndr-grid .days .today:hover{background-color: #999;}
+        /*鼠标点中日期*/
+        .focusIn{background-color:#fff !important;}
+        .focusIn .day-number{color:#000;}

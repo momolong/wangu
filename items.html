@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="swiper/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jCanvaScript.1.5.18.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;}
+        header h1{flex: 4;}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        
+        .swiper-container{width:100%;box-shadow: 0 0 10px 4px #000;margin-bottom: 4vh;}
+         .swiper-container img{width:100%;height:60vw;}
+         article .text{font-family: "微软雅黑";font-size: 1rem;box-shadow: 0 0 10px 4px #000;padding: 3vw;margin-bottom: 4vh;}
+         article .text p{display: flex;}
+         article .text p span{flex:1}
+         .text2{}
+         .text2 h1{}
+         .text2 p{font-size:0.8rem;color:#ccc}
+         .on{color:#fff}
+         .offer{font-family: "微软雅黑";font-size: 1rem;box-shadow: 0 0 10px 4px #000;padding: 3vw 3vw 6vw 3vw;margin-bottom: 4vh;}
+    	.offer input{color:#fff;width:30vw;text-align: center;}
+    	.offer input[type="submit"]{width:40vw;margin:8vw 0 5vw;box-shadow: 0 0 10px 4px #000;border: none;float:right;margin-top: 10vw;}
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1 id="items">青釉大碗</h1>
+	<span></span>
+</header>
+<article>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div id="wel" class="swiper-slide"><img src="img/aa1.jpg" alt=""/></div>
+            <div id="we2" class="swiper-slide"><img src="img/aa2.jpg" alt=""/></div>
+            <div id="we3" class="swiper-slide"><img src="img/aa3.jpg" alt=""/></div>
+            <div id="we4" class="swiper-slide"><img src="img/aa4.jpg" alt=""/></div>
+        </div>
+        <div class="swiper-pagination"></div><!-- 如果需要分页器 -->
+    </div>
+    
+    <div class="text text2">
+    	<h2>报价记录：</h2>
+    	<p><span>50元</span><span>2016.5.10</span></p>
+    	<p><span>80元</span><span>2016.7.18</span></p>
+    	<p><span  class="on">160元</span><span class="on">2016.9.30</span></p>
+    </div>
+    <div class="text">
+    	<p><span>参考价：150 元</span><span>报价次数：0</span> </p>
+    	<p>买家承担运费：快递:15元  </p>
+    	<p>品相：有瑕疵</p>
+    	<p>是否包退：承诺货物包退</p>
+    	<p>上传日期：2016-3-18</p>
+    	<p>销售状态：待售</p>
+    	<p>藏品年代：清</p>
+    	<p>所在地：云南昆明市</p>
+    	<p><span>收藏次数：0</span><span>浏览次数：33</span></p>
+    </div>
+    <div class="text text2">
+    	<h2>详细介绍：</h2>
+    	<p>藏品尺寸：口径19.5厘米</p>
+    	<p>开门老，粗拙些，有短稳线</p>
+    </div>
+    <div class="offer">
+    	<h2>报价记录：</h2>
+    	<p><span>160元</span><span>2016.9.30</span></p>
+    	<form action="#">
+    		<p>我要报价：<input type="number" />元</p>
+    		<p><input type="submit" value="提交"/></p>
+    	</form>
+    </div>
+</article>
+<footer>
+	<span id="main">主页</span>
+	<span id="offer">报价</span>
+	<span id="collection">收藏</span>
+	<span id="chat">私聊</span>
+</footer>
+</body>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        }
+    })
+</script>
+<script src="js/mui.min.js"></script>
+    <script>
+		$(function(){
+			$(".offer").hide();
+			$("#offer").click(function(){
+				$(".text").hide();
+				$("footer").hide();
+				$(".offer").show();
+			})
+			$(".offer input[type=submit]").click(function(){
+				$(".text").show();
+				$("footer").show();
+				$(".offer").hide();
+			})
+			$("#collection").bind("tap",function(){
+				if($(this).text()=="收藏")
+				{
+					$(this).text("收藏+");
+				}
+				else{
+					$(this).text("收藏");
+				}
+			})
+				
+				
+				
+			
+		})
+	mui.init();
+    	//绑定事件
+    	document.getElementById('chat').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'chat.html',//目标页面的url
+    			id:'chat',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画
+				createNew:false,
+    })	
+})
+    	document.getElementById('main').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'main.html',
+    			id:'main',//目标页面的url
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })	
+    
+})
+    mui.init({  // 可同时加载一个或者多个界面
+    preloadPages:[ //加载一个界面
+    { 
+        url:'chat.html', 
+        id:'chat', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ // 可加载另外一个界面，不需要可直接删除
+        url:'main.html', 
+        id:'main', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    }
+    ]
+});	
+    </script>
+</html>

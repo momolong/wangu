@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") #521A06 repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;text-align: center;}
+        header h1{flex: 4;}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        #main{height:300px;padding:10px;}
+        	
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1>莫小龙</h1>
+	<span></span>
+</header>
+<article>
+    <!--Step:1 Prepare a dom for ECharts which (must) has size (width & hight)-->
+    <!--Step:1 为ECharts准备一个具备大小（宽高）的Dom-->
+    <div id="main" ></div>
+    
+    <!--Step:2 Import echarts.js-->
+    <!--Step:2 引入echarts.js-->
+    <script src="dist/echarts.js"></script>
+    
+    <script type="text/javascript">
+    // Step:3 conifg ECharts's path, link to echarts.js from current page.
+    // Step:3 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+    require.config({
+        paths: {
+            echarts: './dist'
+        }
+    });
+    
+    // Step:4 require echarts and use it in the callback.
+    // Step:4 动态加载echarts然后在回调函数中开始使用，注意保持按需加载结构定义图表路径
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/line',
+            'echarts/chart/map'
+        ],
+        function (ec) {
+            //--- 折柱 ---
+            var myChart = ec.init(document.getElementById('main'));
+            myChart.setOption({
+                title : {
+        subtext: ''
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['成交量','成交收入']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'成交量',
+            type:'bar',
+            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'成交收入',
+            type:'bar',
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+            markPoint : {
+                data : [
+                    {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+                    {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+            });
+            window.onresize = function() {
+                myChart.resize();
+                myChart2.resize();
+            }
+        }
+    );
+    </script>
+</article>
+<footer>
+	<span></span>
+	<span id="map">地图</span>
+	<span id="oneself">信息</span>
+	<span id="collection">收藏</span>
+</footer>
+</body>
+<script src="js/mui.min.js"></script>
+
+    <script>
+
+	mui.init();
+	document.getElementById('oneself').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'oneself.html',//目标页面的url
+    			id:'oneself',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })	
+    document.getElementById('collection').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'collection.html',//目标页面的url
+    			id:'collection',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })	
+    document.getElementById('map').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'map.html',//目标页面的url
+    			id:'map',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })
+    mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'oneself.html', 
+        id:'oneself'
+    },
+    { // 可加载另外一个界面，不需要可直接删除
+        url:'collection.html', 
+        id:'collection'
+    },
+    { // 可加载另外一个界面，不需要可直接删除
+        url:'map.html', 
+        id:'map'
+    },{ // 可加载另外一个界面，不需要可直接删除
+        url:'calendar.html', 
+        id:'calendar'
+    }
+    ]
+});
+    </script>
+</html>

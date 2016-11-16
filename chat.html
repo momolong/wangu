@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="swiper/animate.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{background:url("img/bc.png");z-index:9;height:18vw;position:fixed;top:0;line-height:18vw;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;}
+        header h1{flex: 4;}
+        footer{z-index:9;height:18vw;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{width:90vw;margin:18vw 5vw 18vw 5vw;position:fixed;bottom:0;}
+        article p{margin-bottom:5vw;position: relative;min-height:14vw;bottom:5vw;display:inline-block;border-radius:3px;max-width:90vw;box-shadow: 0 0 10px 4px #000;}
+        article p i{position:absolute;width:10vw;height:10vw;display:inline-block;;border-radius: 50%;box-shadow: 0 0 5px 2px #000;}
+        article p i img{width:100%;height:100%;border-radius: 50%;}
+        article p span{line-height: 1.3rem;}
+        article .chat-left p{padding:0 0 0 14vw;}
+        article .chat-left i{left:2vw;top:2vw;}
+        article .chat-right{width:100%;}
+        article .chat-right p{float:right;padding:0 14vw 0 0;}
+        article .chat-right i{right:2vw;top:2vw;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer input{flex:5;box-shadow: 0 0 10px 4px #000 inset;margin: 3vw;border-radius: 5px;border:none;padding: 0 5vw;color:#fff;}
+    	footer span{line-height: 18vw;height:18vw;display:block;margin-left:2vw ;flex: 1;}
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1>昌鼎古玩店</h1>
+	<span></span>
+</header>
+<article>
+    <div class="chat-left">
+    	<p><i><img src="img/header2.png"/></i><span>你好！</span></p>
+    </div>
+    <div class="chat-left">
+    	<p><i><img src="img/header2.png"/></i><span>你好！</span></p>
+    </div>
+    <div class="chat-left">
+    <p><i><img src="img/header2.png"/></i><span>你好！昌鼎古玩店欢迎光临！</span></p>
+    </div>
+    <div class="chat-right clr">
+    <p><span>你好a！</span><i><img src="img/header1.png"/></i></p>
+    </div>
+    <div class="chat-right clr">
+    <p><span>你好a！</span><i><img src="img/header1.png"/></i></p>
+    </div>
+    <div class="chat-right clr">
+    <p><span>你好！问一下那个青花可以降价么？想入手</span><i><img src="img/header1.png"/></i></p>
+    </div>
+</article>
+<footer>
+	<input type="text" /><span id="sub">提交</span>
+</footer>
+	<script>
+		$(function(){
+			$("#sub").click(function(){
+				var cont = $("article").html();
+        		var cont1=$("footer input").val();
+				if(cont1.length==0){
+        }
+        else{
+            $("article").html(cont+'<div class="chat-right clr"><p><span>'+cont1+'</span><i><img src="img/header1.png"/></i></p></div>');
+            $("footer input").val("");
+        }
+			})
+		})
+		
+	</script>
+</body>
+
+</html>

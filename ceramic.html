@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="swiper/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jCanvaScript.1.5.18.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;}
+        header h1{flex: 4;}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        
+        .btns p{box-shadow: 0 0 10px 4px #000;padding: 2vh 0 2vh 5vw;margin-bottom: 3vh;}
+        
+        
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1>陶瓷</h1>
+	<span></span>
+</header>
+<article>
+    <div class="btns">
+    	<p id="pottery">陶器</p>
+    	<p>高古瓷器</p>
+    	<p>唐宋瓷器</p>
+    	<p>元明清明国瓷器</p>
+    	<p>近代瓷器</p>
+    	<p>艺术瓷器</p>
+    	<p>紫砂瓷器</p>
+    	<p>仿古瓷器</p>
+    	<p>其他瓷器</p>
+    </div>
+</article>
+<footer>
+	<span id="main">主页</span>
+	<span id="street">古玩街</span>
+	<span id="shop">古玩店</span>
+	<span id="collection">收藏</span>
+</footer>
+<script src="js/mui.min.js"></script>
+    <script>
+	mui.init();
+    	//绑定事件
+    	document.getElementById('pottery').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'pottery.html',//目标页面的url
+    			id:'pottery',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })	
+    })	
+    document.getElementById('main').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'main.html',//目标页面的url
+    			id:'main',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })	
+    })	
+    document.getElementById('street').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'street.html',//目标页面的url
+    			id:'street',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })
+    })	
+    document.getElementById('shop').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'shop.html',//目标页面的url
+    			id:'shop',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })
+    })			
+    document.getElementById('collection').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'collection.html',//目标页面的url
+    			id:'collection',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })	
+    mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'main.html', 
+        id:'main'
+    },{ 
+        url:'pottery.html', 
+        id:'pottery'
+    },{ 
+        url:'street.html', 
+        id:'street'
+    },{ 
+        url:'collection.html', 
+        id:'collection'
+    },{ 
+        url:'shop.html', 
+        id:'shop'
+    }
+    ]
+});
+    </script>
+</body>
+</html>

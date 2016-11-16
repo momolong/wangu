@@ -1,0 +1,381 @@
+{
+	"index.html": {
+		"resources": [
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"font/zqcw.ttf",
+			"img/logo.png",
+			"img/bc.png",
+			"js/jquery-3.1.0.min.js",
+			"main.html"
+		],
+		"refer": [
+			"login.html",
+			"registered.html",
+			"main.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"img/bc-0.png",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"swiper/swiper.animate1.0.2.min.js",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"font/zqcw.ttf",
+			"js/jquery-3.1.0.min.js",
+			"img/bc.png"
+		],
+		"refer": [
+			"registered.html",
+			"main.html",
+			"me.html",
+			"oneself.html"
+		]
+	},
+	"registered.html": {
+		"refer": [
+			"me.html",
+			"http.html"
+		],
+		"resources": [
+			"font/font.css",
+			"img/bc-0.png",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js",
+			"img/bc.png"
+		]
+	},
+	"http.html": {
+		"resources": [
+			"font/font.css",
+			"img/bc-0.png",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js",
+			"img/bc.png"
+		]
+	},
+	"me.html": {
+		"resources": [
+			"font/font.css",
+			"img/bc-0.png",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		]
+	},
+	"main.html": {
+		"resources": [
+			"img/2.jpg",
+			"img/1.jpg",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"img/4.jpg",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/3.jpg",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"font/font.css",
+			"css/common.css",
+			"font/zqcw.ttf",
+			"img/bc.png",
+			"js/jquery-3.1.0.min.js",
+			"class.html",
+			"js/mui.min.js",
+			"font/iconfont.ttf",
+			"js/main.js",
+			"css/main.css"
+		],
+		"refer": [
+			"class.html",
+			"ceramic.html",
+			"collection.html",
+			"street.html",
+			"shop.html",
+			"index.html",
+			"introduce.html",
+			"oneself.html",
+			"friends.html"
+		]
+	},
+	"ceramic.html": {
+		"resources": [
+			"font/font.css",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"pottery.html",
+			"street.html",
+			"collection.html",
+			"shop.html"
+		]
+	},
+	"pottery.html": {
+		"resources": [
+			"css/card.css",
+			"img/GucnP_U305790T856548451476779272928.jpg",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		],
+		"refer": [
+			"items.html"
+		]
+	},
+	"items.html": {
+		"resources": [
+			"img/aa3.jpg",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"img/aa2.jpg",
+			"img/aa1.jpg",
+			"js/jquery-3.1.0.min.js",
+			"img/aa4.jpg",
+			"items.html"
+		],
+		"refer": [
+			"items.html",
+			"chat.html",
+			"main.html"
+		]
+	},
+	"chat.html": {
+		"resources": [
+			"font/font.css",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js",
+			"img/header2.png",
+			"img/header1.png"
+		]
+	},
+	"street.html": {
+		"resources": [
+			"css/card.css",
+			"img/GucnP_U305790T856548451476779272928.jpg",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		],
+		"refer": [
+			"items.html",
+			"shop.html",
+			"collection.html"
+		]
+	},
+	"collection.html": {
+		"resources": [
+			"css/card.css",
+			"font/iconfont.ttf",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"img/GucnP_U305790T856548451476779272928.jpg",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/header2.png",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		],
+		"refer": [
+			"items.html",
+			"street.html",
+			"main.html"
+		]
+	},
+	"shop.html": {
+		"resources": [
+			"css/card.css",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/header2.png",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		],
+		"refer": [
+			"collection.html",
+			"shop-a.html"
+		]
+	},
+	"introduce.html": {
+		"resources": [
+			"img/10.png",
+			"img/6.png",
+			"img/8.png",
+			"img/9.png",
+			"img/7.png",
+			"font/font.css",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js",
+			"js/mui.min.js"
+		]
+	},
+	"oneself.html": {
+		"resources": [
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"font/zqcw.ttf",
+			"swiper/swiper.animate1.0.2.min.js",
+			"img/header1.png",
+			"img/bc.png",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		],
+		"refer": [
+			"calendar.html",
+			"index.html",
+			"form.html",
+			"delivery.html",
+			"main.html",
+			"payment.html",
+			"refund.html",
+			"evaluation.html",
+			"goods.html",
+			"orders.html"
+		]
+	},
+	"map.html": {
+		"resources": [
+			"dist/chart/map.js",
+			"dist/util/mapData/geoJson/china_geo.js",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"dist/echarts.js",
+			"font/zqcw.ttf",
+			"img/bc.png",
+			"js/jquery-3.1.0.min.js"
+		]
+	},
+	"calendar.html": {
+		"resources": [
+			"clndr/moment.min.js",
+			"clndr/underscore.min.js",
+			"clndr/clndr.min.js",
+			"css/calendar.css"
+		]
+	},
+	"form.html": {
+		"resources": [
+			"dist/chart/map.js",
+			"dist/echarts.js",
+			"dist/chart/bar.js",
+			"dist/chart/line.js"
+		],
+		"refer": [
+			"map.html"
+		]
+	},
+	"addfriend.html": {
+		"resources": [
+			"js/addfriend.js",
+			"css/addfriend.css",
+			"css/card.css",
+			"swiper/animate.css"
+		]
+	},
+	"friends.html": {
+		"resources": [
+			"css/card.css",
+			"swiper/animate.css",
+			"img/header1.png"
+		],
+		"refer": [
+			"main.html",
+			"addfriend.html",
+			"chat.html"
+		]
+	},
+	"delivery.html": {
+		"resources": [
+			"css/card.css",
+			"font/font.css",
+			"js/mui.min.js",
+			"css/common.css",
+			"swiper/animate.css",
+			"swiper/swiper-3.3.1.min.css",
+			"img/GucnP_U305790T856548451476779272928.jpg",
+			"swiper/swiper.animate1.0.2.min.js",
+			"swiper/swiper-3.3.1.jquery.min.js",
+			"js/jquery-3.1.0.min.js"
+		]
+	},
+	"shop-a.html": {
+		"resources": [
+			"css/card.css",
+			"img/GucnP_U305790T856548451476779272928.jpg"
+		]
+	}
+}

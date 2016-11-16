@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="swiper/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jCanvaScript.1.5.18.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") #521A06 repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;text-align: center;}
+        header h1{flex: 4;}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+        footer{position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        	
+        .head{display:flex;border-bottom: 1px solid #fff;margin-bottom: 5vw;;}
+        .head i{background:url('img/header1.png');background-size:100%;display: block;width:20vw;height:20vw;border-radius: 50%;box-shadow: 0 0 8px 2px #000;}
+    	.head P{box-shadow: none;margin-top: 13vw;}
+    	article p{box-shadow: 0 0 8px 2px #000;text-align: center;margin: 3vw;}
+    	article hr{margin: 5vw 0;}
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1>莫小龙</h1>
+	<span></span>
+</header>
+<article>
+    <div class="head">
+    	<i></i>
+    	<p>账号：aaaaaaa</p>
+    </div>
+    <p id="payment">待付款>1</p>
+    <p id="delivery">待发货</p>
+    <p id="goods">待收货>2</p>
+    <p id="evaluation">待评价</p>
+    <p id="refund">退款/售后</p>
+    <p id="orders">全部订单</p>
+    <hr />
+    <p id="">修改密码</p>
+    <p id="">其他设置</p>
+    <hr />
+    <p id="index">注销</p>
+</article>
+<footer>
+	<span id="main">主页</span>
+	<span id="form">表格</span>
+	<span id="calendar">日历</span>
+	<span id="collection">收藏</span>
+</footer>
+</body>
+<script src="js/mui.min.js"></script>
+    <script>
+
+	mui.init();
+	document.getElementById('payment').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'payment.html',//目标页面的url
+    			id:'payment',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })	
+    document.getElementById('delivery').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'delivery.html',//目标页面的url
+    			id:'delivery',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('goods').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'goods.html',//目标页面的url
+    			id:'goods',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('evaluation').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'evaluation.html',//目标页面的url
+    			id:'evaluation',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('refund').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'refund.html',//目标页面的url
+    			id:'refund',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('orders').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'orders.html',//目标页面的url
+    			id:'orders',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+	document.getElementById('main').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'main.html',//目标页面的url
+    			id:'main',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })	
+    document.getElementById('form').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'form.html',//目标页面的url
+    			id:'form',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('index').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'index.html',//目标页面的url
+    			id:'index',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('calendar').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'calendar.html',//目标页面的url
+    			id:'calendar',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+    document.getElementById('collection').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'collection.html',//目标页面的url
+    			id:'collection',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })	
+    mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'payment.html', 
+        id:'payment', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },
+    { 
+        url:'delivery.html', 
+        id:'delivery', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ 
+        url:'goods.html', 
+        id:'goods', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ 
+        url:'orders.html', 
+        id:'orders', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ 
+        url:'refund.html', 
+        id:'refund', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ 
+        url:'evaluation.html', 
+        id:'evaluation', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{
+        url:'main.html', 
+        id:'main', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },
+    { 
+        url:'index.html', 
+        id:'index', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },
+    { // 可加载另外一个界面，不需要可直接删除
+        url:'collection.html', 
+        id:'collection', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },
+    { // 可加载另外一个界面，不需要可直接删除
+        url:'form.html', 
+        id:'form', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ // 可加载另外一个界面，不需要可直接删除
+        url:'calendar.html', 
+        id:'calendar', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    }
+    ]
+});
+    </script>
+</html>

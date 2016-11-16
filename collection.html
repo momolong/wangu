@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="swiper/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <link rel="stylesheet" href="css/card.css" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jCanvaScript.1.5.18.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <style>
+        html{width:100%;color:#fff;}
+        h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+        body{width:100%;background: url("img/bc.png") repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:1rem;}
+        header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+        header span{flex: 1;}
+        header h1{flex: 4;color:#ccc}
+        footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:5vh 0 15vh;width:80vw;min-height: 75vh;}
+        footer{color:#ccc;position: fixed;bottom:0;background: url("img/bc.png");background-size: 100%;
+        display: flex;}
+        footer span{flex:1;line-height: 10vh;text-align: center;}
+        .delete{font-family:"iconfont";text-align:center;line-height:10vw;color:#999;width:10vw;height:10vw;box-shadow: 0 0 10px 4px #000;border-radius:50% ;}
+        .on{color:#fff;}
+        
+    </style>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1 class="jie-btn on">街</h1>
+	<h1 class="dian-btn">店</h1>
+	<span></span>
+</header>
+<article class="dian">
+    <div class="card" >
+    		<div class="card-img" id="a1"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+    <div class="card">
+    		<div class="card-img"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+<div class="card">
+    		<div class="card-img"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+
+</article>
+<article class="jie">
+    <div class="shop-card" >
+    		<div class="card-img" id="a1"><img src="img/header2.png" alt="" /></div>
+    		<div class="card-text">
+    			<h3>昌鼎古玩店</h3>
+    			<p>所在地：山西太原</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+    <div class="shop-card" >
+    		<div class="card-img" id="a1"><img src="img/header2.png" alt="" /></div>
+    		<div class="card-text">
+    			<h3>昌鼎古玩店</h3>
+    			<p>所在地：山西太原</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+    <div class="shop-card" >
+    		<div class="card-img" id="a1"><img src="img/header2.png" alt="" /></div>
+    		<div class="card-text">
+    			<h3>昌鼎古玩店</h3>
+    			<p>所在地：山西太原</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+    <div class="shop-card" >
+    		<div class="card-img" id="a1"><img src="img/header2.png" alt="" /></div>
+    		<div class="card-text">
+    			<h3>昌鼎古玩店</h3>
+    			<p>所在地：山西太原</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+    
+</article>
+<footer>
+	<span id="main">主页</span>
+	<span id="street">古玩街</span>
+	<span id="shop">古玩店</span>
+	<span id="collection" class="on">收藏</span>
+</footer>
+<script src="js/mui.min.js"></script>
+    <script>
+    $(".dian").show();
+    $(".jie").hide();
+    $(".jie-btn").bind("tap",function(){
+    	$(".dian").show();
+    	$(this).addClass("on");
+    	$(".jie").hide();
+    	$(".dian-btn").removeClass("on");
+    	
+    })
+    $(".dian-btn").bind("tap",function(){
+    	$(".dian").hide();
+    	$(this).addClass("on");
+    	$(".jie").show();
+    	$(".jie-btn").removeClass("on");
+    })
+    $(".delete").bind("tap",function(){
+    	$(this).parent().remove();
+    })
+    
+	mui.init();
+    	//绑定事件
+    	document.getElementById('a1').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'items.html',
+    			id:'items',//目标页面的url
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+},createNew:false,
+    })	
+    })	
+    document.getElementById('main').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'main.html',
+    			id:'main',//目标页面的url
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+},createNew:false,
+    })	
+    })	
+    document.getElementById('street').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'street.html',//目标页面的url
+    			id:'street',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })
+    })	
+    document.getElementById('shop').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'shop.html',//目标页面的url
+    			id:'shop',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+    })
+    })			
+    document.getElementById('collection').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'collection.html',//目标页面的url
+    			id:'collection',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })	
+    mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'main.html', 
+        id:'main'
+    },{ 
+        url:'items.html', 
+        id:'items'
+    },{ 
+        url:'street.html', 
+        id:'street'
+    },{
+        url:'collection.html', 
+        id:'collection'
+    },{ 
+        url:'shop.html', 
+        id:'shop'
+    }
+    ]
+});
+    </script>
+</body>
+</html>

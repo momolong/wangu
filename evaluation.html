@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>主页</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="font/font.css" />
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="swiper/animate.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <style>
+        html{width:100%;height:100%;}
+        body{width:100%;height:100%;background: url("img/bc.png") no-repeat;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:20px;}
+        article{width:100vw;margin:13vh 0vw;}
+        article .btn{margin-right:5vw;margin-bottom: 8vw;box-shadow: 0 0 8px 2px #000;width:40vw;float:right;text-align: center;}
+		article .card{margin-bottom: 3vw;}
+		header,footer{background: url("img/bc.png");width:100vw;height:10vh;box-shadow: 0 0 10px 4px #000;position: fixed;} 
+		header{top:0;}
+		footer{bottom: 0;display: flex;}
+		footer span{flex:1;line-height: 10vh;text-align: center;}
+		header{height:10vh;line-height:10vh;width:100%;display:flex;text-align: center;}
+        header span{flex: 1;text-align: center;font-family: "iconfont";}
+        header h1{flex: 4;}
+    </style>
+</head>
+<body>
+	<header>
+		<span id=""></span>
+		<h1>待评价</h1>
+		<span id=""></span>
+	</header>
+<article>
+    <div class="card" >
+    		<div class="card-img" id="a1"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    </div>
+    <div class="btn" id="">
+    	评价
+    </div>
+    <div class="card" >
+    		<div class="card-img" id="a1"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    </div>
+    <div class="btn">
+    	评价
+    </div>
+    <div class="card" >
+    		<div class="card-img" id="a1"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    </div>
+    <div class="btn">
+    	评价
+    </div>
+</article>
+<footer>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span id="oneself">返回</span>
+</footer>
+<script src="js/mui.min.js"></script>
+    <script>
+
+	mui.init();
+	document.getElementById('oneself').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'oneself.html',//目标页面的url
+    			id:'oneself',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })
+	mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'oneself.html', 
+        id:'oneself'
+    }
+    ]
+   })
+	
+	</script>
+</body>
+
+</html>

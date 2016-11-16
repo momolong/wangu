@@ -1,0 +1,57 @@
+
+/*商品卡*/
+.card{width:100vw;box-shadow: 0 0 10px 4px #000;padding:5vw;display: flex;margin-bottom: 7vw;;}
+        .card .card-img{flex:4;}
+        .card .card-text{flex: 6;}
+        .card .card-img img{width:30vw;height:26vw;overflow:hidden;box-shadow: 0 0 5px 2px #000;}
+        .card .card-text h3{font-size: 1.4rem;}
+        .card .card-text p{font-size:0.8rem;font-family: "微软雅黑";color:#ccc}
+
+/* <div class="card" >
+    		<div class="card-img" id="a1"><img src="img/GucnP_U305790T856548451476779272928.jpg" alt="" /></div>
+    		<div class="card-text">
+    			<h3>青釉大碗</h3>
+    			<p>参考价：160元</p>
+    			<p>快递：免邮</p>
+    			<p>收藏次数：10</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+*/
+
+/*店家卡*/
+.shop-card{width:100vw;box-shadow: 0 0 10px 4px #000;padding:5vw;display: flex;margin-bottom: 7vw;;}
+        .shop-card .card-img{flex:4;}
+        .shop-card .card-text{flex: 6;}
+        .shop-card .card-img img{width:20vw;height:16vw;overflow:hidden;box-shadow: 0 0 5px 2px #000;}
+        .shop-card .card-text h3{font-size: 1.4rem;}
+        .shop-card .card-text p{font-size:0.8rem;font-family: "微软雅黑";color:#ccc}   
+
+/*<div class="shop-card" >
+    		<div class="card-img" id="a1"><img src="img/header2.png" alt="" /></div>
+    		<div class="card-text">
+    			<h3>昌鼎古玩店</h3>
+    			<p>所在地：山西太原</p>
+    		</div>
+    		<div class="delete">&#xe600;</div>
+    </div>
+ */        
+        
+/*好友卡*/
+.friend i{margin:3vw 5vw;background:url('../img/header1.png');background-size:100%;display: block;width:15vw;height:15vw;border-radius: 50%;box-shadow: 0 0 8px 2px #000;}
+    	.friend{box-shadow: 0 0 10px 2px #000;width:100%;display:flex ;margin-top: 8vw;}
+        .friend .head{flex:30}
+        .friend .text{flex:70}
+        .friend h4{margin-top: 3vw;font-size:1.5rem;}
+        .friend .text p{color:#ccc;white-space:nowrap; overflow:hidden;text-overflow: ellipsis;}
+
+/*<div class="friend" id="chat">
+   	<div class="head">
+    	<i></i>
+    </div>
+    	<div class="text">
+    	<h4>泡泡龙</h4><p>亲？在么</p>
+    </div>
+   </div>
+ */ 
+      

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><title>主页</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="font/font.css" />
+    <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="swiper/animate.css" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="swiper/swiper-3.3.1.jquery.min.js"></script>
+    <script src="swiper/swiper.animate1.0.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <style>
+        html{width:100%;}
+        body{width:100%;background:url("img/bc.png") #521A06 repeat-y;background-size: 100%;overflow: hidden;}
+        a{font-family: "zqcw";font-size:20px;}
+        header{height:12vw;width:100%;box-shadow: 0 0 10px 4px #000;}
+        footer{height:12vw;width:100%;box-shadow: 0 0 10px 4px #000;}
+        article{margin:20vw 10vw 20vw;width:80vw;}
+        article p{margin:0 0 4vw 0;display: flex;}
+        article input{flex: 8;color:#fff}
+        article #http{margin-left:10vw;}
+        article .btn{display:flex;}
+        article .btn input{box-shadow: 0 0 7px 2px #000 ;border: none;flex:1;margin:1vw;text-align: center;}
+        article .last span{font-size:15px;flex:1;}
+
+    </style>
+</head>
+<body>
+	<header></header>
+<article>
+    <form action="#">
+        <p>用户注册：</p>
+        <p></p>
+        <p><span>账号：</span><input type="email" /></p>
+        <p><span>昵称：</span><input type="text" /></p>
+        <p>性别：<span>
+					<label><input type="checkbox" neme="sex"/>男</label>
+				</span>
+				<span>
+					<label><input type="checkbox" name="sex" />女</label>
+				</span>
+        </p>
+        <p><span>电话：</span><input type="tel" /></p>
+        <p><span>密码：</span><input type="password" /></p>
+        <p><span>密码：</span><input type="password" /></p>
+        <p><label><input type="checkbox" />用户协议</label>
+        	<sapn id="http">查看</sapn>
+        </p>
+        <p class="btn"><input type="button" id="registered" value="注册"/></p>
+        <p class="last"><span></span><span></span><span id="me">联系我们</span></p>
+    </form>
+</article>
+<footer></footer>
+<script src="js/mui.min.js"></script>
+    <script>
+	mui.init();
+    	//绑定事件
+    	var page = mui.preload({
+    	url:http.html
+  	});
+  	var page = mui.preload({
+    	url:me.html
+  	});
+    	document.getElementById('http').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'http.html',
+    			id:'http',//目标页面的url
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500		  //动画时间
+			},
+			createNew:false,
+    		})
+    	})
+    	document.getElementById('me').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'me.html',
+    			id:'me',//目标页面的url
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+			},
+			createNew:false,
+    		})
+    	})
+mui.init({  // 可同时加载一个或者多个界面
+    preloadPages:[ //加载一个界面
+    { 
+        url:'http.html', 
+        id:'http', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    },{ // 可加载另外一个界面，不需要可直接删除
+        url:'me.html', 
+        id:'me', 
+        styles:{},//窗口参数 
+        extras:{},//自定义扩展参数
+        subpages:[{},{}]//预加载页面的子页面 
+    }
+    ]
+});
+    </script>
+</body>
+
+</html>

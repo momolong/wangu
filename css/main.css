@@ -1,0 +1,22 @@
+html{width:100%;color:#fff;}
+h1{font-weight: normal;font-size: 1.5rem;text-align: center;}
+body{width:100%;background: url("../img/bc.png") #521A06 repeat-y;background-size: 100%;overflow: hidden;}
+a{font-family: "zqcw";font-size:1rem;}
+
+header{height:10vh;line-height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;display:flex;}
+header span{flex: 1;text-align: center;font-family: "iconfont";}
+header h1{flex: 4;}
+
+article{margin:5vh 10vw 15vh;width:80vw;min-height: 75vh;}
+.swiper-container{width:100%;box-shadow: 0 0 10px 4px #000;}
+.swiper-container img{width:100%;}
+.btns{}
+.btns p{display: flex;margin:3vh 0;}
+.btns span{height:13vh;margin:2vw;flex: 1;box-shadow: 0 0 10px 4px #000;text-align: center;
+line-height: 13vh;}
+btns span a{color:#fff;}
+
+footer{height:10vh;width:100%;box-shadow: 0 0 10px 4px #000;}
+footer{position: fixed;bottom:0;background: url("../img/bc.png");background-size: 100%;
+display: flex;}
+footer span{flex:1;line-height: 10vh;text-align: center;}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>new</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="font/font.css"/>
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<header>
+	<span></span>
+	<h1>莫小龙</h1>
+	<span></span>
+</header>
+<article>
+    <div class="am-u-lg-6 am-u-md-6 am-u-sm-12" style="height: 320px;">
+    <div id="full-clndr">
+        <script type="text/template" id="id_clndr_template">
+            <div class="clndr-controls">
+                <div class="month"><%= year %></div>
+                <div class="clndr-previous-button"><</div>
+                <div class="clndr-next-button">></div>
+                <div class="month"><%= month %></div>
+            </div>
+            <div class="clndr-grid">
+                <div class="days-of-the-week">
+                    <% _.each(daysOfTheWeek, function(day) { %><div class="header-day"><%= day %></div><% }); %>
+                </div>
+                <div class="days">
+                    <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div><% }); %>
+                </div>
+            </div>
+        </script>
+    </div>
+</div>
+</article>
+<footer>
+	<span id="main">主页</span>
+	<span></span>
+	<span></span>
+	<span id="collection">收藏</span>
+</footer>
+</body>
+<script src="js/mui.min.js"></script>
+
+<script src="clndr/underscore.min.js"></script>
+<script src="clndr/moment.min.js"></script>
+<script src="clndr/clndr.min.js"></script>
+<script>
+    $("#full-clndr").clndr({
+        template: $('#id_clndr_template').html(),
+        clickEvents: {
+            onMonthChange: function(month) {
+                // TODO: 这边写月份改变事件，控制底部线条图的变化
+            },
+            click: function(target){
+                var dateDom = $(target.element);
+                if((!dateDom.hasClass("focusIn")) && (dateDom.hasClass("past") || dateDom.hasClass("today"))){
+                    $(".focusIn").removeClass("focusIn");
+                    dateDom.addClass("focusIn");
+                    // TODO: 这边写日期改变的事件，控制右边环形图的变化
+
+                }
+            },
+        },
+        daysOfTheWeek : [ '日', '一', '二', '三', '四', '五', '六' ],
+        forceSixRows : true,
+        adjacentDaysChangeMonth : true
+    });
+</script>
+
+    <script>
+
+	mui.init();
+	document.getElementById('main').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'main.html',//目标页面的url
+    			id:'main',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+    createNew:false,
+    })	
+    })	
+    document.getElementById('collection').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'collection.html',//目标页面的url
+    			id:'collection',
+			show:{
+				autoShow:true,
+				aniShow:'slide-in-right',//动画名称
+    			duration:500 		  //动画时间
+				},//动画 
+				createNew:false,
+   })
+    })	
+    mui.init({
+    preloadPages:[ //加载一个界面
+    { 
+        url:'main.html', 
+        id:'main'
+    },
+    { // 可加载另外一个界面，不需要可直接删除
+        url:'collection.html', 
+        id:'collection'
+    },{ // 可加载另外一个界面，不需要可直接删除
+        url:'calendar.html', 
+        id:'calendar'
+    }
+    ]
+});
+    </script>
+</html>
